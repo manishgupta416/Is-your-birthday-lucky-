@@ -12,7 +12,7 @@ function checkBirthdayDateIsLucky() {
     const dob = dateOfBirth.value;
     const sum = calculateSum(dob)
     console.log(sum)
-    if(sum && dob) {
+    if(sum && dob ) {
         compareValues(sum , luckyNumber.value)
     }else{
         showOutput.innerText="Please Enter both fields"
@@ -21,11 +21,17 @@ function checkBirthdayDateIsLucky() {
 }
 
 function compareValues(sum , luckyNumber) {
-    if(sum % luckyNumber == 0) {
-        showOutput.innerText = "your birthday is lucky 🥳🚀"
-    } else{
-        showOutput.innerText = "your birthday is not lucky😕"
+    if(sum && luckyNumber) {
+        if(sum % luckyNumber == 0) {
+            showOutput.innerText = "your birthday is lucky 🥳🚀"
+        } else{
+            showOutput.innerText = "your birthday is not lucky😕"
+        }
+    } 
+    else{
+        showOutput.innerText="Please Enter both fields"
     }
+    
 }
 
 function calculateSum(dob) {

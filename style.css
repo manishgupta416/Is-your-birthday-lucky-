@@ -65,3 +65,13 @@ button:hover{
     background-color: #0731db;
     color: #00fffc;
 }
+
+@media screen and (max-width: 992px) {
+    body {
+      text-align: center;
+    }
+    input {
+        padding: 9px 10px;
+        width: 32vw;
+    }
+  }
